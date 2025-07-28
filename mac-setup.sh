@@ -16,3 +16,12 @@ brew update
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
 brew bundle --file $DOTFILES/Brewfile
+
+# Configure macOS settings
+echo "Configuring macOS settings..."
+
+# Turn off "Show suggested and recent items in Dock"
+defaults write com.apple.dock show-recents -bool false
+
+# Restart Dock to apply changes
+killall Dock
