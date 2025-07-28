@@ -18,10 +18,8 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="code ~/.zshrc"
 alias sourcezsh="source ~/.zshrc"
 
-include "$DOTFILES/zsh/pure.zsh"
 include "$DOTFILES/zsh/fzf.zsh"
 
 if [[ $(uname) = Darwin ]]; then
   include "$DOTFILES/zsh/thinkific.zsh"
-  include "$DOTFILES/zsh/nvm.zsh"
 fi

@@ -32,8 +32,3 @@
         target=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-fzf-history-search &&
         git clone --depth 1 $repo $target ||
         git -C $target pull
-    - description: Installing pure
-      command: repo=https://github.com/sindresorhus/pure.git &&
-        target=$HOME/.zsh/pure &&
-        git clone --depth 1 $repo $target ||
-        git -C $target pull
