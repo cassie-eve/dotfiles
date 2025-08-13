@@ -4,4 +4,4 @@ export THINKIFICPATH=~/Thinkific/workspace
 export DEV_PACKAGES="zsh"
 export RAILS_ENV=development
 
-alias thinkup="~/Thinkific/workspace/start-all.sh"
+alias thinkup="$HOME/Thinkific/workspace/thinkup.sh"
