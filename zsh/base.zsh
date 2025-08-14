@@ -13,6 +13,9 @@ ZSH_AUTOSUGGEST_STRATEGY=(completion)
 
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-fzf-history-search)
 
+# keep oh-my-zsh cache files in the same place as the rest of the dotfiles
+ZSH_COMPDUMP="${ZSH_CACHE_DIR:-$HOME/.oh-my-zsh/cache}/.zcompdump-${HOST}-${ZSH_VERSION}"
+
 source $ZSH/oh-my-zsh.sh
 
 alias zshconfig="code ~/.zshrc"
