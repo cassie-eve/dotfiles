@@ -30,6 +30,8 @@ if [ -f "$(brew --prefix)/opt/fzf/shell/completion.zsh" ]; then
   source "$(brew --prefix)/opt/fzf/shell/completion.zsh"
 fi
 
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
 if [[ $(uname) = Darwin ]]; then
   include "$DOTFILES/zsh/thinkific.zsh"
 fi

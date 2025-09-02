@@ -23,5 +23,9 @@ echo "Configuring macOS settings..."
 # Turn off "Show suggested and recent items in Dock"
 defaults write com.apple.dock show-recents -bool false
 
+# Disable Quick Note hot corner (example: bottom-right)
+defaults write com.apple.dock wvous-br-corner -int 0
+defaults write com.apple.dock wvous-br-modifier -int 0
+
 # Restart Dock to apply changes
 killall Dock
