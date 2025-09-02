@@ -21,7 +21,14 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="code ~/.zshrc"
 alias sourcezsh="source ~/.zshrc"
 
-include "$DOTFILES/zsh/fzf.zsh"
+# Load fzf shell key bindings and completion from brew-installed location
+if [ -f "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh" ]; then
+  source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
+fi
+
+if [ -f "$(brew --prefix)/opt/fzf/shell/completion.zsh" ]; then
+  source "$(brew --prefix)/opt/fzf/shell/completion.zsh"
+fi
 
 if [[ $(uname) = Darwin ]]; then
   include "$DOTFILES/zsh/thinkific.zsh"
