@@ -35,3 +35,9 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 if [[ $(uname) = Darwin ]]; then
   include "$DOTFILES/zsh/thinkific.zsh"
 fi
+
+# Thinkific dev environment runner
+alias thinkdev="cd ~/Thinkific/workspace/thinkific-env && ./run-dev.sh"
+
+# Use 1Password SSH agent
+export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
