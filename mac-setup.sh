@@ -27,5 +27,11 @@ defaults write com.apple.dock show-recents -bool false
 defaults write com.apple.dock wvous-br-corner -int 0
 defaults write com.apple.dock wvous-br-modifier -int 0
 
+# Prevent itunes from auto-launching when pressing play button
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2>/dev/null || true
+
+# Configure noTunes to hide menu bar icon
+defaults write digital.twisted.noTunes showMenuBarIcon -bool false
+
 # Restart Dock to apply changes
 killall Dock

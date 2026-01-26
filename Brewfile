@@ -3,6 +3,7 @@ tap "homebrew/cask-fonts"
 
 cask "docker"                   # Container Management
 cask "spotify"                  # Music
+cask "notunes"                  # Prevent iTunes from auto-launching
 cask "visual-studio-code"       # Extendable IDE
 
 brew "gh"           # Github CLI
